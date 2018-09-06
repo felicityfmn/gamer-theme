@@ -1,0 +1,183 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Your variable overrides
+ $body-bg: #000;
+// $body-color: #111;
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Montserrat+Subrayada');
+$theme-colors: (
+  "primary": green,
+  "danger": #ff4136
+);
+$bg-color: indigo;
+$font-color: #fff9e6;
+html,body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.intro{
+  height: 100%;
+  width: 100%;
+  margin:auto;
+  background: url('space-invaders.jpg');
+  display: table;
+  top: 0;
+  background-size: cover;
+  .inner{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+    .content{
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      h1{
+        font-family: 'Montserrat Subrayada', sans-serif;
+        color: $font-color;
+        text-shadow: 10px 0px 20px #ffffff, 0 0 5px #ff0000;
+        font-size: 300%;
+      }
+      .btn{
+        border-radius: 9px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bolder;
+        color: #e60000;
+        font-size: 135%;
+        padding: 10px 20px;
+        border: solid #e60000 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: rgba(255, 179, 179, 0.5);
+        text-shadow: 0 0 5px #002db3, 0 0 12px #ccccff;
+        box-shadow: 0 0 5px #002db3;
+      }
+      a:hover{
+        color: #9900ff;
+        border: solid #9900ff 3px;
+        text-shadow: 0 0 5px #0000b3, 0 0 10px #ccccff;
+        box-shadow: 0 0 5px #ccccff;
+      }
+    }
+  }
+}
+nav{
+  ul{
+    background:linear-gradient( $bg-color,#0000cc);
+
+  }
+  li{
+    color: $font-color;
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat Subrayada', sans-serif;
+  }
+  a:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+}
+.parallax-one{
+  background-image: url('space.jpg');
+  min-height: 567px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position:relative;
+}
+.parallax-two{
+  background-image: url('space-invader.gif');
+  min-height: 600px;
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  z-index: 1;
+  position:relative;
+}
+.parallax-three{
+  background-image: url('arcade.jpg');
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  position:relative;
+}
+
+.container-fluid-one{
+  background: #fff9e6;
+  padding: 30px;
+  z-index: 50;
+  float:right;
+  width:50%;
+  position: relative;
+}
+p{
+  padding: 10px;
+}
+.container-fluid-two{
+  background: #fff9e6;
+  padding: 30px;
+  z-index: 50;
+  float:right;
+  width:100%;
+  position: relative;
+}
+.container-fluid-three{
+  background: #fff9e6;
+  padding: 30px;
+  z-index: 50;
+  float:left;
+  width:50%;
+  position: relative;
+}
+.container-fluid-four{
+  background: #fff9e6;
+  padding: 30px;
+  z-index: 50;
+  float:left;
+  width:100%;
+  position: relative;
+}
+.footer{
+  background: linear-gradient(black,#000080);
+  width: 100%;
+  display: inline-block;
+  height: 70px;
+  text-align: center;
+  padding: 20px;
+  font-size: 110%;
+  a{
+    margin: 50px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .content h1{
+    font-size: 250%;
+  }
+  .btn{
+    font-size: 110%;
+    padding: 7px 15px;
+  }
+  .container-fluid-one,.container-fluid-three{
+    width: 100%;
+  }
+  .footer{
+    font-size: 150%;
+    display: table-footer-group;
+    text{display: none;}
+  }
+}
